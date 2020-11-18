@@ -1,5 +1,5 @@
-# passGrabber
-Password Grabbing Python Script
+# python-selfbot
+Selfbot with Python Script
 
 
 Intentionally neutered, sorry.
